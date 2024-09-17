@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+My blog
+{% endblock title %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
+{% endblock css_files %}
+{% block contain %}
+
+
+<section id="welcome">
+
+   <header>
+        <img src="{% static "blog/images/ayush.png" %}" alt="Ayush's pic">
+        <h2>Aadarsha blog</h2>
+    </header>
+    <p>Hi I am Ayush Tamang and I am a BCA first year student.</p>
+
+</section>
+
+<section id='latest-posts'>
+    <h2>My latest Thoughts</h2>
+    <ul> 
+    {% for  post in posts %}
+    
+        {% include "blog/includes/post.html" %}     
+    {% endfor %}
+    </ul>
+
+</section>
+<section id="about">
+
+    <h2>What I Do</h2>
+    <p>I love programming, I love to learn more new about how the technology work </p>
+    <p>I am a huge fan of Korean Cultural.So I love to work and live in Korea</p>
+</section>
+{% endblock contain %}
