@@ -46,13 +46,16 @@ body {
 #summary address {
   font-weight: bold;
 }
-
+#summary  a{
+  color: white !important;
+  text-decoration:none ; 
+}
 #summary time {
   font-weight: bold;
 } 
 
 main {
-  width: 90%;
+  width : 90%;
   max-width: 90rem;
   margin: 3rem auto;
   background-color: white;
