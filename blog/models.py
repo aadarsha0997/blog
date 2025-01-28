@@ -18,7 +18,7 @@ class Post(models.Model):
     title=models.CharField(max_length=50)
     slug=models.SlugField(default="",null=True,unique=True)
     date =models.DateField()
-    img=models.CharField(null=True,max_length=50)
+    image=models.ImageField(upload_to="uploads",null=True)
     excerpt=models.CharField(default="",null=True,max_length=300)
     content=models.TextField(1000)
     author=models.ForeignKey(Author,default="unknown",on_delete=models.SET_DEFAULT)
